@@ -1,0 +1,23 @@
+<ion-header class="headr-n">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Quotes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div wrapper>
+    <ion-item
+      lines="none"
+      detail="false"
+      *ngFor="let qlist of topiclist; index as i"
+      class="ion-no-padding"
+    >
+      <ion-avatar (click)="sendData(qlist.id)">
+        <img src="{{qlist?.img}}" />
+      </ion-avatar>
+      <div quotesafter (click)="sendData(qlist.id)">
+        <h2>{{qlist?.quote | slice:0:90}}...</h2>
+      </div>
+    </ion-item>
+  </div>
+</ion-content>

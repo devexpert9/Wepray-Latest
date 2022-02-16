@@ -1,0 +1,29 @@
+<ion-header mode="ios" [class.show-background]="showToolbar">
+  <ion-toolbar>
+    <span class="icon-arr" (click)="goBack()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </span>
+    <ion-title class="ion-text-center">{{qoutedata.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  <div wrapper>
+    <div class="slidr">
+      <div
+        slideBox
+        [ngStyle]="{'background-image': 'url('+ qoutedata.img +')'}"
+      >
+        <ion-icon
+          name="heart"
+          (click)="addToFav(qoutedata.id)"
+          [ngClass]="status ? 'active' : ''"
+        ></ion-icon>
+        <ion-icon name="play" (click)="onPlay(qoutedata.id)"></ion-icon>
+      </div>
+      <div quotesafter>
+        <h2>{{qoutedata.quote}}</h2>
+      </div>
+      <div footname>{{qoutedata.name}}</div>
+    </div>
+  </div>
+</ion-content>

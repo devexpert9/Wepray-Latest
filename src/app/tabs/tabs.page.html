@@ -1,0 +1,30 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" (click)="removeClass()">
+      <span>
+        <img src="assets/img/home.svg" />
+      </span>
+    </ion-tab-button>
+
+    <ion-tab-button
+      (click)="onClickPrayer()"
+      [ngClass]="status ? 'playertab' : 'playertabremove'"
+    >
+      <span>
+        <img src="assets/img/prayer.svg" />
+      </span>
+    </ion-tab-button>
+
+    <ion-tab-button tab="quotes" (click)="removeClass()">
+      <span>
+        <img src="assets/img/quote.svg" />
+      </span>
+    </ion-tab-button>
+
+    <ion-tab-button tab="favourite" (click)="removeClass()">
+      <span>
+        <img src="assets/img/heart.svg" />
+      </span>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,0 +1,202 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*** Poppins Fonts ***/
+
+@font-face {
+  font-family: "poppinslight";
+  src: url("assets/fonts/poppins-light.woff2") format("woff2"),
+    url("assets/fonts/poppins-light.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinsregular";
+  src: url("assets/fonts/poppins-regular.woff2") format("woff2"),
+    url("assets/fonts/poppins-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsmedium";
+  src: url("assets/fonts/poppins-medium.woff2") format("woff2"),
+    url("assets/fonts/poppins-medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinssemibold";
+  src: url("assets/fonts/poppins-semibold.woff2") format("woff2"),
+    url("assets/fonts/poppins-semibold.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsbold";
+  src: url("assets/fonts/poppins-bold.woff2") format("woff2"),
+    url("assets/fonts/poppins-bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsblack";
+  src: url("assets/fonts/poppins-black.woff2") format("woff2"),
+    url("assets/fonts/poppins-black.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/*** End ***/
+
+* {
+  font-family: "poppinsregular";
+  --ion-default-font: "poppinsregular";
+  --ion-font-family: "Playfair Display", serif;
+}
+
+.show-background {
+  background-color: var(--ion-color-primary);
+  ion-toolbar {
+    ion-title {
+      color: #fff !important;
+    }
+  }
+}
+button.mat-focus-indicator.ngx-p-1.volume.justify-content-center.mat-button.mat-button-base,
+button.mat-focus-indicator.ngx-p-1.volume.mat-button.mat-button-base {
+  display: none;
+}
+
+.player-settings {
+  position: relative;
+  padding-bottom: 80px;
+  button.mat-focus-indicator.ngx-p-1.mat-button.mat-button-base {
+    position: absolute;
+    bottom: -60px;
+    left: -160px;
+    right: 0;
+    margin: 0 auto;
+    background: transparent;
+    color: #fff;
+    width: 50px;
+  }
+  button.mat-focus-indicator.ngx-p-1.play-pause.mat-button.mat-button-base {
+    left: 0;
+    border: none;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    border: 9px solid #791c80;
+    color: #742f71;
+    bottom: -70px;
+    span.mat-button-wrapper {
+      color: #742f71 !important;
+    }
+  }
+  button.mat-focus-indicator.ngx-p-1.skip-next.mat-button.mat-button-base {
+    left: 0px;
+    right: -160px;
+  }
+  mat-card.mat-card.mat-focus-indicator.ngx-d-flex.ngx-justify-content-center.ngx-audio-player.z-depth-1.mat-elevation-z2 {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+  marquee,
+  mat-card.mat-card.ngx-audio-player span {
+    color: #fff !important;
+  }
+  .mat-slider-track-background {
+    background: #b1b1b5;
+    height: 3px !important;
+  }
+  .mat-accent .mat-slider-thumb,
+  .mat-accent .mat-slider-thumb-label,
+  .mat-accent .mat-slider-track-fill {
+    background: #6cbd44;
+    height: 3px !important;
+  }
+  .mat-accent .mat-slider-thumb {
+    width: 9px;
+    height: 9px !important;
+    top: -6px;
+    right: -8px;
+    display: block !important;
+    transform: scale(0.7) !important;
+  }
+  .ngx-d-none.ngx-d-sm-block.ngx-py-3.ngx-px-1 {
+    white-space: nowrap;
+    min-width: 40px;
+  }
+  .mat-slider-horizontal .mat-slider-track-wrapper {
+    height: 3px;
+    width: 100%;
+    border-radius: 100px;
+    background: #b1b1b5;
+  }
+  mat-card.mat-card.mat-focus-indicator.mat-elevation-z1.ngx-audio-player {
+    display: none !important;
+  }
+  .mat-slider-horizontal .mat-slider-wrapper {
+    height: 10px;
+    overflow: hidden;
+  }
+  .mat-slider-horizontal .mat-slider-track-wrapper {
+    top: 2px;
+  }
+  .mat-slider-horizontal .mat-slider-wrapper {
+    top: 21px;
+  }
+  .ngx-py-3.ngx-px-1 {
+    width: 47px !important;
+    min-width: 47px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+}
+.slides-s {
+  margin-bottom: 15px;
+  display: block;
+  ion-item-option {
+    width: 60px;
+    font-size: 28px;
+    border-radius: 0 7px 7px 0;
+  }
+}
+ion-content [wrapper] ion-list[prayer] ion-item,
+ion-content [wrapper] ion-list[quotes] ion-item {
+  margin-bottom: 0px !important;
+}
+
+ion-content [wrapper] ion-list[prayer] ion-item ion-avatar ion-icon {
+  color: var(--ion-color-primary) !important;
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "com.wepray.app",
+	"appName": "wePray",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

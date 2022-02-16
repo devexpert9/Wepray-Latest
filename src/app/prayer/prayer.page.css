@@ -1,0 +1,77 @@
+ion-header {
+  position: absolute;
+  top: 0;
+}
+ion-header::after {
+  display: none !important;
+}
+ion-header ion-toolbar {
+  --background: transparent;
+  box-shadow: none;
+  --border-width: 0px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  min-height: 47px;
+  position: relative;
+}
+ion-header ion-toolbar ion-back-button {
+  --icon-font-size: 18px;
+  position: relative;
+  z-index: 2;
+}
+ion-header ion-toolbar ion-title {
+  font-size: 16px;
+  padding: 0px 18px;
+  color: #fff;
+  font-weight: 600;
+}
+ion-content {
+  --background: none;
+  background-image: url("../../assets/img/plbg.png");
+  background-position: 0px 255px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  --padding-top: 0;
+}
+ion-content [topWrapper] {
+  background-image: url("../../assets/img/playerbg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 58px 30px 58px;
+  background-color: #09121c;
+  color: #fff;
+  height: 355px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ion-content [topWrapper] h1 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 32px;
+  color: #fff;
+}
+ion-content [topWrapper] p {
+  color: #898f97;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 15px 0 0;
+}
+ion-content [wrapper] {
+  margin-top: -52px;
+  border-radius: 30px 30px 0 0;
+  background-image: url("../../assets/img/plbg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 45px 15px 15px 15px;
+}
+ion-content [wrapper] p {
+  font-size: 13px;
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 24px;
+}

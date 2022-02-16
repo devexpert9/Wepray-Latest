@@ -1,0 +1,39 @@
+<ion-header [class.show-background]="showToolbar">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  class="ion-padding"
+  [scrollEvents]="true"
+  (ionScroll)="onScroll($event)"
+>
+  <div bgbanner style="background-image: url('assets/img/homebg.jpg')">
+    <div>
+      <img src="assets/img/logo1.png" [ngStyle]="{'width':'60px'}" />
+
+      <img src="assets/img/play.svg" playbtn />
+    </div>
+  </div>
+
+  <h1>A Prayer For You Today.</h1>
+  <ion-item
+    lines="none"
+    class="ion-no-padding"
+    *ngFor="let tlist of topiclist; index as i"
+    (click)="getData(tlist.id)"
+  >
+    <ion-avatar>
+      <img src="{{tlist.img}}" />
+    </ion-avatar>
+    <div>
+      <h2>{{tlist.title}}</h2>
+      <p>{{tlist.desc | slice: 0: 70}}...</p>
+    </div>
+  </ion-item>
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="onFeedBack()">
+  Feedback
+</ion-fab>

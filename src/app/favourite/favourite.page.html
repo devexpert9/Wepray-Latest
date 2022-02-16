@@ -1,0 +1,68 @@
+<ion-header [class.show-background]="showToolbar">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Favourite</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  <div wrapper>
+    <ion-segment mode="md" [(ngModel)]="orderstab">
+      <ion-segment-button value="prayer"> Prayers </ion-segment-button>
+      <ion-segment-button value="quotes"> Quotes </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="orderstab">
+      <ion-list *ngSwitchCase="'prayer'" prayer>
+        <ion-item-sliding *ngFor="let item of filterFavList" class="slides-s">
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-avatar (click)="onPlay(item.id)">
+              <img src="{{item.img}}" />
+              <ion-icon name="heart"></ion-icon>
+            </ion-avatar>
+            <div (click)="onPlay(item.id)">
+              <h2>{{item.title}}</h2>
+              <p>{{item.name}} <span dots></span>{{item.audio[0].duration}}</p>
+            </div>
+            <ion-icon name="play-circle" (click)="onPlay(item.id)"></ion-icon>
+          </ion-item>
+
+          <ion-item-options side="end" (click)="removeFav(item.id)">
+            <ion-item-option>
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        <div nodatashow *ngIf="isShowFavList">
+          <p>No Data to show</p>
+        </div>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'quotes'" quotes>
+        <ion-item-sliding
+          *ngFor="let item of filterFavQuotesList"
+          class="slides-s"
+        >
+          <ion-item lines="none" class="ion-no-padding">
+            <ion-avatar routerLink="/tabs/quotes/quotedetails/{{item.id}}">
+              <img src="{{item.img}}" />
+              <ion-icon name="heart"></ion-icon>
+            </ion-avatar>
+            <div routerLink="/tabs/quotes/quotedetails/{{item.id}}">
+              <h2>{{item.quote| slice:0:90}}...</h2>
+            </div>
+            <!-- <ion-icon name="play-circle"></ion-icon> -->
+          </ion-item>
+
+          <ion-item-options side="end" (click)="removeFavquotes(item.id)">
+            <ion-item-option>
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        <div nodatashow *ngIf="isShowList">
+          <p>No Data to show</p>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,119 @@
+ion-header.headr-n {
+  position: initial;
+  &::after {
+    display: none !important;
+  }
+  ion-toolbar {
+    --background: transparent;
+    background-image: url("../../assets/img/bgshape.svg");
+    box-shadow: none;
+    --border-width: 0px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    min-height: 81px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fbfdff;
+      height: 30px;
+      border-radius: 50px 50px 0 0;
+    }
+    ion-back-button {
+      --icon-font-size: 18px;
+      position: relative;
+      z-index: 2;
+    }
+    ion-title {
+      font-size: 16px;
+      padding: 0px 18px;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}
+
+ion-content {
+  --background: #fbfdff;
+  background: #fbfdff;
+  --padding-top: 0;
+  [wrapper] {
+    border-radius: 50px 50px 0 0;
+    ion-item {
+      --ion-safe-area-right: 0;
+      outline: 0px;
+      margin-bottom: 15px;
+      box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      background: #fff;
+      --background: #fff;
+      padding: 10px;
+      ion-avatar {
+        min-width: 90px;
+        height: 90px;
+        outline: 0px;
+        object-fit: cover;
+        border-radius: 10px;
+        --border-radius: 10px;
+        margin-right: 15px;
+        overflow: hidden;
+        position: relative;
+        img {
+          min-width: 90px;
+          height: 90px;
+          object-fit: cover;
+        }
+        span {
+          background: var(--ion-color-primary);
+          position: absolute;
+          left: 0;
+          top: 10px;
+          width: 38px;
+          border-radius: 0 100px 100px 0;
+          display: flex;
+          align-items: center;
+          height: 35px;
+          justify-content: center;
+          img {
+            min-width: 22px;
+            height: 22px;
+            object-fit: contain;
+          }
+        }
+      }
+      [quotesafter] {
+        position: relative;
+        &::before {
+          content: "";
+          background-image: url("../../assets/img/quotesafter.svg");
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: 35px;
+          width: 100%;
+          background-position: left top;
+          height: 100%;
+          left: 0;
+          top: -12px;
+        }
+      }
+      h2 {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 21px;
+        color: #606f83;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  ion-item {
+    .item-detail-icon {
+      display: none !important;
+    }
+  }
+}

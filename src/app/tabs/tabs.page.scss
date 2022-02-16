@@ -1,0 +1,81 @@
+ion-tabs {
+  contain: none;
+  ion-tab-bar {
+    background: var(--ion-color-primary);
+    --background: var(--ion-color-primary);
+    min-height: 55px;
+    contain: none;
+    ion-tab-button {
+      ion-icon {
+        color: #fff;
+      }
+      img {
+        width: 23px;
+      }
+      &.tab-selected {
+        span {
+          display: block;
+          padding: 15px;
+        }
+      }
+    }
+    ion-tab-button.tab-selected,
+    ion-tab-button.playertab {
+      overflow: visible;
+      --overflow: visible;
+      content: none;
+      margin-top: -50px;
+      background: transparent;
+      height: 65px;
+      position: relative;
+      z-index: 0;
+      --color-selected: transparent;
+      span {
+        width: 52px;
+        height: 52px !important;
+        border-radius: 50%;
+        /* top: -30px; */
+        /* position: relative; */
+        background: #742f71;
+        /*border: 6px solid #fff;*/
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        /* background: url(foot.png); */
+        height: 68px;
+        /* background-size: cover; */
+        /* background-position: center center; */
+        top: -2px;
+        width: 68px;
+        margin: 0 auto;
+        background: url(../../assets/img/tabicon2.png);
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+      }
+    }
+    ion-tab-button.playertab {
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        /* background: url(foot.png); */
+        height: 68px;
+        top: -2px;
+        width: 68px;
+        margin: 0 auto;
+        background: url(../../assets/img/tabicon.png);
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+      }
+      span {
+        line-height: 63px;
+      }
+    }
+  }
+}
