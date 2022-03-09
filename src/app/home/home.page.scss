@@ -45,8 +45,14 @@ ion-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 12px 12px 18px;
+    padding: 0;
     outline: 0px;
+    video {
+      position: relative;
+      top: 7px;
+      object-fit: initial;
+      width: 100%;
+    }
     &::before {
       position: absolute;
       content: "";
@@ -68,8 +74,8 @@ ion-content {
       }
       [playbtn] {
         position: absolute;
-        right: -12px;
-        bottom: -12px;
+        right: -3px;
+        bottom: -8px;
       }
     }
   }

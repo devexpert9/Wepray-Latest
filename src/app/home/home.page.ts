@@ -1,6 +1,12 @@
 import { Subject } from 'rxjs';
 import { SharedService } from './../shared/services/shared.service';
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
@@ -12,6 +18,8 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 export class HomePage implements OnInit {
   showToolbar = false;
   status: boolean;
+  isplay: boolean = false;
+  @ViewChild('videoPlayer') videoplayer: ElementRef;
   onScroll($event) {
     if ($event && $event.detail && $event.detail.scrollTop) {
       const scrollTop = $event.detail.scrollTop;
@@ -38,6 +46,10 @@ export class HomePage implements OnInit {
     this.sharedService.publishData('');
     localStorage.setItem('id', id);
     this.router.navigate(['tabs/prayer/' + id]);
+  }
+
+  toggleVideo() {
+    this.videoplayer.nativeElement.play();
   }
 
   topiclist = [
