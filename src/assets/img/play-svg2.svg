@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35">
+	<title>play-svg</title>
+	<style>
+		.s0 { fill: #ffffff } 
+		.s1 { fill: #9c449c;stroke: #9c449c;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2 } 
+	</style>
+	<g id="Layer">
+		<circle id="Layer" class="s0" cx="17.5" cy="17.5" r="17.5"/>
+	</g>
+	<path id="Layer" class="s1" d="m14.3 12l9.4 6-9.4 6z"/>
+</svg>

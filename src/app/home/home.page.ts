@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { AudioPlayerComponent } from 'ngx-audio-player';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,9 @@ export class HomePage implements OnInit {
   showToolbar = false;
   status: boolean;
   isplay: boolean = false;
+  todayQuotes: any;
   @ViewChild('videoPlayer') videoplayer: ElementRef;
+  @ViewChild(AudioPlayerComponent) player: AudioPlayerComponent;
   onScroll($event) {
     if ($event && $event.detail && $event.detail.scrollTop) {
       const scrollTop = $event.detail.scrollTop;
@@ -32,14 +35,18 @@ export class HomePage implements OnInit {
     private cd: ChangeDetectorRef,
     private sharedService: SharedService,
     private emailComposer: EmailComposer
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ionViewWillEnter() {
     this.cd.detectChanges();
     this.topiclist;
     this.cd.detectChanges();
+    this.shuffle(this.topiclist)
+    this.todayQuotes = JSON.parse(localStorage.getItem('prayerValue'))
+
+
   }
 
   getData(id) {
@@ -49,7 +56,30 @@ export class HomePage implements OnInit {
   }
 
   toggleVideo() {
-    this.videoplayer.nativeElement.play();
+    this.sharedService.publishData('');
+    localStorage.setItem('id', this.todayQuotes.id)
+    this.router.navigate(['tabs/prayer/' + this.todayQuotes.id]);
+  }
+
+  shuffle(array) {
+    if (array.length == 2) {
+      var b = array[0];
+      array[0] = array[1];
+      array[1] = b;
+      return array;
+    } else {
+      let currentIndex = array.length,
+        randomIndex;
+      while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex],
+          array[currentIndex],
+        ];
+      }
+      return array;
+    }
   }
 
   topiclist = [
@@ -181,4 +211,6 @@ export class HomePage implements OnInit {
       subject: 'Feedback on wePray app',
     });
   }
+
+
 }
