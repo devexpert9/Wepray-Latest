@@ -16,16 +16,10 @@ export class QuotedetailsPage implements OnInit {
   };
   showToolbar = false;
   status: boolean = false;
-
-  onScroll($event) {
-    if ($event && $event.detail && $event.detail.scrollTop) {
-      const scrollTop = $event.detail.scrollTop;
-      this.showToolbar = scrollTop >= 20;
-    }
-  }
-
   qouteid: any;
   qoutedata: any;
+
+
 
   topiclist = [
     {
@@ -430,8 +424,16 @@ export class QuotedetailsPage implements OnInit {
       this.status = false;
     }
   }
+
   goBack() {
     this._location.back();
+  }
+
+  onScroll($event) {
+    if ($event && $event.detail && $event.detail.scrollTop) {
+      const scrollTop = $event.detail.scrollTop;
+      this.showToolbar = scrollTop >= 20;
+    }
   }
 
   addToFav(data) {
@@ -453,4 +455,5 @@ export class QuotedetailsPage implements OnInit {
     this.sharedService.publishData('');
     this.router.navigateByUrl('/tabs/prayer/' + id);
   }
+
 }
