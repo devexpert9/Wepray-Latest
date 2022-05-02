@@ -30,9 +30,9 @@ export class FavouritePage implements OnInit {
     private cd: ChangeDetectorRef,
     private router: Router,
     private sharedService: SharedService
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ionViewWillEnter() {
     this.cd.detectChanges();
@@ -82,7 +82,7 @@ export class FavouritePage implements OnInit {
       audio: [
         {
           url: 'assets/audio/discouraged.mp3',
-          duration: '01:20',
+          duration: '01:21',
         },
       ],
     },
@@ -113,15 +113,7 @@ export class FavouritePage implements OnInit {
         {
           url: 'assets/audio/loneliness.mp3',
           duration: '00:59',
-        },
-        {
-          url: 'assets/audio/loneliness2.mp3',
-          duration: '01:10',
-        },
-        {
-          url: 'assets/audio/loneliness3.mp3',
-          duration: '01:17',
-        },
+        }
       ],
     },
     {
@@ -154,12 +146,8 @@ export class FavouritePage implements OnInit {
       audio: [
         {
           url: 'assets/audio/peace.mp3',
-          duration: '01:51',
-        },
-        {
-          url: 'assets/audio/peace2.mp3',
-          duration: '01:14',
-        },
+          duration: '01:18',
+        }
       ],
     },
     {
@@ -193,11 +181,7 @@ export class FavouritePage implements OnInit {
         {
           url: 'assets/audio/tired.mp3',
           duration: '01:26',
-        },
-        {
-          url: 'assets/audio/tired2.mp3',
-          duration: '01:10',
-        },
+        }
       ],
     },
     {
@@ -211,12 +195,9 @@ export class FavouritePage implements OnInit {
       audio: [
         {
           url: 'assets/audio/stressed.mp3',
-          duration: '01:52',
-        },
-        {
-          url: 'assets/audio/stressed2.mp3',
           duration: '01:11',
         },
+
       ],
     },
     {
@@ -230,12 +211,8 @@ export class FavouritePage implements OnInit {
       audio: [
         {
           url: 'assets/audio/pain-physical.mp3',
-          duration: '01:43',
-        },
-        {
-          url: 'assets/audio/pain-physical2.mp3',
-          duration: '01:16',
-        },
+          duration: '01:19',
+        }
       ],
     },
     {
@@ -249,12 +226,12 @@ export class FavouritePage implements OnInit {
       audio: [
         {
           url: 'assets/audio/pain_emotional.mp3',
-          duration: '01:26',
+          duration: '01:25',
         },
         {
           url: 'assets/audio/pain_emotional2.mp3',
-          duration: '01:20',
-        },
+          duration: '01:29',
+        }
       ],
     },
     {
@@ -325,7 +302,7 @@ export class FavouritePage implements OnInit {
       audio: [
         {
           url: 'assets/audio/rejected.mp3',
-          duration: '01:41',
+          duration: '01:44',
         },
       ],
     },
@@ -341,11 +318,7 @@ export class FavouritePage implements OnInit {
         {
           url: 'assets/audio/doubt.mp3',
           duration: '01:20',
-        },
-        {
-          url: 'assets/audio/doubt2.mp3',
-          duration: '01:44',
-        },
+        }
       ],
     },
     {
@@ -385,7 +358,7 @@ export class FavouritePage implements OnInit {
     {
       id: 18,
       img: 'assets/img/strength.svg',
-      title: 'Strength',
+      title: 'Disappointment',
       quote:
         'You are stronger than you think, because the power of Almighty God is available to you. Your strength is renewed when you trust in Him. ',
       name: 'Kendra Tillman',
@@ -573,7 +546,7 @@ export class FavouritePage implements OnInit {
     {
       id: 18,
       img: 'assets/img/Strength.jpg',
-      title: 'Strength',
+      title: 'Disappointment',
       quote:
         'You are stronger than you think, because the power of Almighty God is available to you. Your strength is renewed when you trust in Him. ',
       name: 'Kendra Tillman',

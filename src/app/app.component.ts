@@ -148,7 +148,7 @@ export class AppComponent {
     {
       id: 18,
       img: 'assets/img/strength.svg',
-      title: 'Strength',
+      title: 'Disappointment',
       desc: '“Be strong and courageous and do the work. Do not be afraid or discouraged, for the LORD God, my God is with you. He will not fail you or forsake you.” 1 Chronicles 28:20',
     },
     {

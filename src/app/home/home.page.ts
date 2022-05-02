@@ -40,6 +40,7 @@ export class HomePage implements OnInit {
   ngOnInit() { }
 
   ionViewWillEnter() {
+    localStorage.removeItem('id')
     this.cd.detectChanges();
     this.topiclist;
     this.cd.detectChanges();
@@ -55,12 +56,14 @@ export class HomePage implements OnInit {
     this.router.navigate(['tabs/prayer/' + id]);
   }
 
+  //On click play Button
   toggleVideo() {
     this.sharedService.publishData('');
     localStorage.setItem('id', this.todayQuotes.id)
     this.router.navigate(['tabs/prayer/' + this.todayQuotes.id]);
   }
 
+  //Shuffel Audio
   shuffle(array) {
     if (array.length == 2) {
       var b = array[0];
@@ -82,6 +85,8 @@ export class HomePage implements OnInit {
     }
   }
 
+
+  //List Array
   topiclist = [
     {
       id: 1,
@@ -188,7 +193,7 @@ export class HomePage implements OnInit {
     {
       id: 18,
       img: 'assets/img/strength.svg',
-      title: 'Strength',
+      title: 'Disappointment',
       desc: '“Be strong and courageous and do the work. Do not be afraid or discouraged, for the LORD God, my God is with you. He will not fail you or forsake you.” 1 Chronicles 28:20',
     },
     {
@@ -205,6 +210,8 @@ export class HomePage implements OnInit {
     },
   ];
 
+
+  //Feedback Functionality
   onFeedBack() {
     this.emailComposer.open({
       to: ['reply@wepray.live'],
