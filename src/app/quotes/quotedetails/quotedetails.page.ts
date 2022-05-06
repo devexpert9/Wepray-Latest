@@ -19,8 +19,6 @@ export class QuotedetailsPage implements OnInit {
   qouteid: any;
   qoutedata: any;
 
-
-
   topiclist = [
     {
       id: 1,

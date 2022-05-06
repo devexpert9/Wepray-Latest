@@ -1,6 +1,6 @@
 <ion-header [class.show-background]="showToolbar">
   <ion-toolbar>
-    <ion-title class="ion-text-center">{{prayerdata?.title}}</ion-title>
+    <ion-title class="ion-text-right">{{prayerdata?.title}}</ion-title>
 
     <ng-container>
       <ion-icon slot="end" (click)="addToFav(prayerdata.id)" [ngClass]="status ? 'active' : ''" name="heart"></ion-icon>
