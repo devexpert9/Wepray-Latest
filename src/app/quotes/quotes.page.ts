@@ -30,7 +30,7 @@ export class QuotesPage implements OnInit {
         {
           id: 1,
           title: 'Discouraged',
-          duration: '01:20',
+          duration: '01:21',
           link: 'assets/audio/discouraged.mp3',
         },
       ],
@@ -66,19 +66,7 @@ export class QuotesPage implements OnInit {
           title: 'Lonely',
           link: 'assets/audio/loneliness.mp3',
           duration: '00:59',
-        },
-        {
-          id: 2,
-          title: 'Lonely 2',
-          link: 'assets/audio/loneliness2.mp3',
-          duration: '01:10',
-        },
-        {
-          id: 3,
-          title: 'Lonely 3',
-          link: 'assets/audio/loneliness3.mp3',
-          duration: '01:17',
-        },
+        }
       ],
     },
     {
@@ -114,17 +102,9 @@ export class QuotesPage implements OnInit {
       desc: '“Do not be anxious about anything, but in every situation, by prayer. present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds” Philippians 4:6',
       audio: [
         {
-          id: 1,
-          title: 'Peace',
-          link: 'assets/audio/peace.mp3',
-          duration: '01:51',
-        },
-        {
-          id: 2,
-          title: 'Peace 1',
-          link: 'assets/audio/peace2.mp3',
-          duration: '01:14',
-        },
+          url: 'assets/audio/peace.mp3',
+          duration: '01:18',
+        }
       ],
     },
     {
@@ -164,13 +144,7 @@ export class QuotesPage implements OnInit {
           title: 'Tired',
           link: 'assets/audio/tired.mp3',
           duration: '01:26',
-        },
-        {
-          id: 2,
-          title: 'Tired 1',
-          link: 'assets/audio/tired2.mp3',
-          duration: '01:10',
-        },
+        }
       ],
     },
     {
@@ -186,12 +160,6 @@ export class QuotesPage implements OnInit {
           id: 1,
           title: 'Stressed',
           link: 'assets/audio/stressed.mp3',
-          duration: '01:52',
-        },
-        {
-          id: 2,
-          title: 'Stressed 1',
-          link: 'assets/audio/stressed2.mp3',
           duration: '01:11',
         },
       ],
@@ -206,17 +174,9 @@ export class QuotesPage implements OnInit {
       desc: '“Even though on the outside it often looks like things are falling apart on us, on the inside, where God is making new life, not a day goes by without his unfolding grace. These hard times are small potatoes compared to the coming good times, the lavish celebration prepared for us” 2 Corinthians 4:16',
       audio: [
         {
-          id: 1,
-          title: 'Physical Pain',
-          link: 'assets/audio/pain-physical.mp3',
-          duration: '01:43',
-        },
-        {
-          id: 2,
-          title: 'Physical Pain 1',
-          link: 'assets/audio/pain-physical2.mp3',
-          duration: '01:16',
-        },
+          url: 'assets/audio/pain-physical.mp3',
+          duration: '01:19',
+        }
       ],
     },
     {
@@ -232,14 +192,12 @@ export class QuotesPage implements OnInit {
           id: 1,
           title: 'Emotional Pain',
           link: 'assets/audio/pain_emotional.mp3',
-          duration: '01:26',
+          duration: '01:25',
         },
         {
-          id: 2,
-          title: 'Emotional Pain 1',
-          link: 'assets/audio/pain_emotional2.mp3',
-          duration: '01:20',
-        },
+          url: 'assets/audio/pain_emotional2.mp3',
+          duration: '01:29',
+        }
       ],
     },
     {
@@ -324,7 +282,7 @@ export class QuotesPage implements OnInit {
           id: 1,
           title: 'Rejected',
           link: 'assets/audio/rejected.mp3',
-          duration: '01:41',
+          duration: '01:44',
         },
       ],
     },
@@ -341,14 +299,8 @@ export class QuotesPage implements OnInit {
           id: 1,
           title: 'Doubt',
           link: 'assets/audio/doubt.mp3',
-          duration: '01:20',
-        },
-        {
-          id: 2,
-          title: 'Doubt 1',
-          link: 'assets/audio/doubt2.mp3',
-          duration: '01:44',
-        },
+          duration: '01:23',
+        }
       ],
     },
     {
@@ -394,7 +346,7 @@ export class QuotesPage implements OnInit {
     {
       id: 18,
       img: 'assets/img/Strength.jpg',
-      title: 'Strength',
+      title: 'Disappointment',
       quote:
         '“You are stronger than you think, because the power of Almighty God is available to you. Your strength is renewed when you trust in Him”',
       name: 'Kendra Tillman',
@@ -402,16 +354,10 @@ export class QuotesPage implements OnInit {
       audio: [
         {
           id: 1,
-          title: 'Strength',
-          link: 'assets/audio/discouraged.mp3',
-          duration: '01:20',
-        },
-        {
-          id: 2,
-          title: 'Strength 2',
-          link: 'assets/audio/discouraged2.mp3',
-          duration: '01:20',
-        },
+          title: 'Disappointment',
+          link: 'assets/audio/disappointment.mp3',
+          duration: '01:34',
+        }
       ],
     },
     {
@@ -449,13 +395,13 @@ export class QuotesPage implements OnInit {
       ],
     },
   ];
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   sendData(id) {
     this.router.navigate(['/quotes/quotedetails/' + id]);
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   addToFav(data) {
     this.status = !this.status;

@@ -20,11 +20,11 @@ ion-header {
     ion-title {
       font-size: 16px;
       padding: 0px 18px;
-      color: #fff;
+      color: #000;
       font-weight: 600;
     }
     ion-icon {
-      color: #fff;
+      color: #000;
       font-size: 20px;
       &.active {
         color: var(--ion-color-primary);
@@ -45,26 +45,28 @@ ion-content.player-all {
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 40px 58px 30px 58px;
+    padding: 0px 10px 60px 130px;
+    text-align: right;
     background-color: #09121c;
     color: #fff;
     height: 355px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end;
+    text-align: right;
     h1 {
       margin: 0;
       font-size: 15px;
       line-height: 27px;
-      color: #ffffff;
+      color:black;
+
     }
     p {
-      color: #898f97;
-      font-weight: 400;
-      font-size: 14px;
-      margin: 15px 0 0;
+      color: var(--ion-color-primary);
+          font-weight: bold;
+          font-size: 12px;
+          margin: 8px 0 0;
     }
   }
   [wrapper] {

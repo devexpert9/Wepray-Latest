@@ -4,28 +4,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content
-  class="ion-padding"
-  [scrollEvents]="true"
-  (ionScroll)="onScroll($event)"
->
+
+
+<ion-content class="ion-padding" [scrollEvents]="true" (ionScroll)="onScroll($event)">
   <div bgbanner>
-    <div>
-      <video height="180"  playsinline poster="assets/img/homebg.png" #videoPlayer>
-        <img src="assets/img/logo1.png" [ngStyle]="{'width':'60px'}" />
-        <source src="assets/video/wepray_video.mp4" type="video/mp4" />
-      </video>
-      <img src="assets/img/play.svg" (click)="toggleVideo()" playbtn />
+    <marquee behavior="scroll" scrolldelay="100" direction="left">{{todayQuotes?.desc}}</marquee>
+    <div play-logo>
+      <img src="assets/img/logo1.png" [ngStyle]="{'width':'60px'}" />
+      <div playbtninfo>
+        <h3>Prayer Of The Day...</h3>
+        <img src="assets/img/play-svg2.svg" (click)="toggleVideo()" playbtn />
+      </div>
     </div>
   </div>
 
   <h1>A Prayer For You Today.</h1>
-  <ion-item
-    lines="none"
-    class="ion-no-padding"
-    *ngFor="let tlist of topiclist; index as i"
-    (click)="getData(tlist.id)"
-  >
+  <ion-item lines="none" class="ion-no-padding" *ngFor="let tlist of topiclist; index as i" (click)="getData(tlist.id)">
     <ion-avatar>
       <img src="{{tlist.img}}" />
     </ion-avatar>

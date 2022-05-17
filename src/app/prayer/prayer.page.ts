@@ -34,7 +34,7 @@ export class PrayerPage implements OnInit {
     private activatedroute: ActivatedRoute,
     private cd: ChangeDetectorRef,
     private sharedService: SharedService
-  ) {}
+  ) { }
 
   prayerid: any;
   prayerdata: any;
@@ -50,6 +50,7 @@ export class PrayerPage implements OnInit {
   msaapDisplayDuration = false;
   msaapDisablePositionSlider = false;
 
+  //List Array
   topiclist = [
     {
       id: 1,
@@ -63,7 +64,7 @@ export class PrayerPage implements OnInit {
         {
           id: 1,
           title: 'Discouraged',
-          duration: '01:20',
+          duration: '01:21',
           link: 'assets/audio/discouraged.mp3',
         },
       ],
@@ -99,19 +100,7 @@ export class PrayerPage implements OnInit {
           title: 'Lonely',
           link: 'assets/audio/loneliness.mp3',
           duration: '00:59',
-        },
-        {
-          id: 2,
-          title: 'Lonely 2',
-          link: 'assets/audio/loneliness2.mp3',
-          duration: '01:10',
-        },
-        {
-          id: 3,
-          title: 'Lonely 3',
-          link: 'assets/audio/loneliness3.mp3',
-          duration: '01:17',
-        },
+        }
       ],
     },
     {
@@ -150,14 +139,8 @@ export class PrayerPage implements OnInit {
           id: 1,
           title: 'Peace',
           link: 'assets/audio/peace.mp3',
-          duration: '01:51',
-        },
-        {
-          id: 2,
-          title: 'Peace 1',
-          link: 'assets/audio/peace2.mp3',
-          duration: '01:14',
-        },
+          duration: '01:18',
+        }
       ],
     },
     {
@@ -197,13 +180,7 @@ export class PrayerPage implements OnInit {
           title: 'Tired',
           link: 'assets/audio/tired.mp3',
           duration: '01:26',
-        },
-        {
-          id: 2,
-          title: 'Tired 1',
-          link: 'assets/audio/tired2.mp3',
-          duration: '01:10',
-        },
+        }
       ],
     },
     {
@@ -219,14 +196,8 @@ export class PrayerPage implements OnInit {
           id: 1,
           title: 'Stressed',
           link: 'assets/audio/stressed.mp3',
-          duration: '01:52',
-        },
-        {
-          id: 2,
-          title: 'Stressed 1',
-          link: 'assets/audio/stressed2.mp3',
           duration: '01:11',
-        },
+        }
       ],
     },
     {
@@ -242,14 +213,8 @@ export class PrayerPage implements OnInit {
           id: 1,
           title: 'Physical Pain',
           link: 'assets/audio/pain-physical.mp3',
-          duration: '01:43',
-        },
-        {
-          id: 2,
-          title: 'Physical Pain 1',
-          link: 'assets/audio/pain-physical2.mp3',
-          duration: '01:16',
-        },
+          duration: '01:19',
+        }
       ],
     },
     {
@@ -265,13 +230,13 @@ export class PrayerPage implements OnInit {
           id: 1,
           title: 'Emotional Pain',
           link: 'assets/audio/pain_emotional.mp3',
-          duration: '01:26',
+          duration: '01:25',
         },
         {
           id: 2,
           title: 'Emotional Pain 1',
           link: 'assets/audio/pain_emotional2.mp3',
-          duration: '01:20',
+          duration: '01:29',
         },
       ],
     },
@@ -357,7 +322,7 @@ export class PrayerPage implements OnInit {
           id: 1,
           title: 'Rejected',
           link: 'assets/audio/rejected.mp3',
-          duration: '01:41',
+          duration: '01:44',
         },
       ],
     },
@@ -374,14 +339,8 @@ export class PrayerPage implements OnInit {
           id: 1,
           title: 'Doubt',
           link: 'assets/audio/doubt.mp3',
-          duration: '01:20',
-        },
-        {
-          id: 2,
-          title: 'Doubt 1',
-          link: 'assets/audio/doubt2.mp3',
-          duration: '01:44',
-        },
+          duration: '01:23',
+        }
       ],
     },
     {
@@ -427,7 +386,7 @@ export class PrayerPage implements OnInit {
     {
       id: 18,
       img: 'assets/img/icon5.svg',
-      title: 'Strength',
+      title: 'Disappointment',
       quote:
         '“You are stronger than you think, because the power of Almighty God is available to you. Your strength is renewed when you trust in Him.”',
       name: 'Kendra Tillman',
@@ -435,16 +394,10 @@ export class PrayerPage implements OnInit {
       audio: [
         {
           id: 1,
-          title: 'Strength',
-          link: 'assets/audio/discouraged.mp3',
-          duration: '01:20',
-        },
-        {
-          id: 2,
-          title: 'Strength 2',
-          link: 'assets/audio/discouraged2.mp3',
-          duration: '01:20',
-        },
+          title: 'Disappointment',
+          link: 'assets/audio/disappointment.mp3',
+          duration: '01:34',
+        }
       ],
     },
     {
@@ -490,6 +443,8 @@ export class PrayerPage implements OnInit {
     this.isAudioPlaying = true;
   }
 
+
+  //Shuffle Array Function
   shuffle(array) {
     if (array.length == 2) {
       var b = array[0];
@@ -511,7 +466,6 @@ export class PrayerPage implements OnInit {
     }
   }
 
-  // Used like so
 
   ionViewWillEnter() {
     this.audioList = this.shuffle(this.topiclist[this.prayerid - 1].audio);
@@ -528,6 +482,8 @@ export class PrayerPage implements OnInit {
     }
   }
 
+
+  //Add To Fav List 
   addToFav(data) {
     this.status = !this.status;
     var data1 = JSON.parse(localStorage.getItem('fav'));

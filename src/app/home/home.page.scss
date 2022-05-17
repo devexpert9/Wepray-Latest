@@ -33,6 +33,10 @@ ion-content {
   background-size: contain;
   background-color: #fff;
   [bgbanner] {
+    background: url(../../assets/img/1366_768.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,22 +65,41 @@ ion-content {
       right: 0;
       bottom: 0;
       background: linear-gradient(251.9deg, #9c449c 0.81%, #000000 99.39%);
-      opacity: 0.6;
+      opacity: 0.5;
     }
-    div {
+    [play-logo] {
       position: relative;
       z-index: 2;
+      padding: 0px 10px 8px 6px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
       p {
         margin: 0;
         font-size: 13px;
         padding-right: 42px;
         color: #fff;
       }
+<<<<<<< HEAD
       [playbtn] {
         position: absolute;
       right: -6px;
       bottom: -9px;
       width: 65px;
+=======
+      [playbtninfo] {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 14px;
+        width: calc(100% - 70px);
+        h3 {
+          font-size: 14px;
+          color: #fff;
+          font-style: italic;
+          margin: 0px 5px 0px;
+        }
+>>>>>>> 3f490063cb7c92393a7c4fe605d77e34e3ed0238
       }
     }
   }
@@ -149,4 +172,17 @@ ion-fab {
   padding: 8px 14px;
   border-radius: 100px;
   font-size: 13px;
+}
+marquee {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #fff;
+  font-family: var(--ion-font-family);
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
