@@ -12,6 +12,9 @@ ion-header {
     --padding-end: 15px;
     min-height: 47px;
     position: relative;
+    @media only screen and (min-width:768px){
+      --min-height: 56px;
+    }
     ion-back-button {
       --icon-font-size: 18px;
       position: relative;
@@ -22,15 +25,36 @@ ion-header {
       padding: 0px 18px;
       color: #000;
       font-weight: 600;
+      @media only screen and (min-width:768px){
+        font-size: 28px;
+        padding: 0px 70px;
+      }
     }
+    
     ion-icon {
       color: #000;
       font-size: 20px;
       &.active {
         color: var(--ion-color-primary);
       }
+      @media only screen and (min-width:768px){
+        font-size: 34px;
+      }
     }
   }
+}
+
+.ios{
+  ion-header {
+    ion-toolbar {
+      ion-title{
+        padding: 0 50px;
+        @media only screen and (min-width:768px){
+          padding: 0px 70px;
+        }
+      }
+    }
+  } 
 }
 
 ion-content.player-all {
@@ -49,24 +73,34 @@ ion-content.player-all {
     text-align: right;
     background-color: #09121c;
     color: #fff;
-    height: 355px;
+    height: 410px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     text-align: right;
+    @media only screen and (min-width:768px){
+      height: 870px;
+      padding: 0px 70px 60px 180px;
+    }
     h1 {
       margin: 0;
       font-size: 15px;
       line-height: 27px;
       color:black;
-
+      @media only screen and (min-width:768px){
+        font-size: 30px;
+        line-height: 49px;
+      }
     }
     p {
       color: var(--ion-color-primary);
           font-weight: bold;
           font-size: 12px;
           margin: 8px 0 0;
+          @media only screen and (min-width:768px){
+            font-size: 26px;
+          }
     }
   }
   [wrapper] {
@@ -84,6 +118,9 @@ ion-content.player-all {
       color: #fff;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       padding-top: 24px;
+      @media only screen and (min-width:768px){
+        font-size: 28px;
+      }
     }
     ::ng-deep {
       ang-music-player {

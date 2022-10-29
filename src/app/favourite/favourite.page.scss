@@ -22,6 +22,9 @@ ion-header {
       padding: 0px 18px;
       color: #fff;
       font-weight: 600;
+      @media only screen and (min-width:768px){
+        font-size: 18px;
+    }
     }
   }
 }
@@ -39,6 +42,9 @@ ion-content {
     border-radius: 30px 30px 0 0;
     background-color: #fbfdff;
     padding: 15px;
+    @media only screen and (min-width:768px){
+      min-height: 100%;
+  }
     ion-segment {
       margin-bottom: 12px;
       background-color: #fff;
@@ -62,6 +68,9 @@ ion-content {
           --color-hover: var(--ion-color-white);
           --color-checked: var(--ion-color-white);
         }
+        @media only screen and (min-width:768px){
+          font-size: 16px;
+      }
       }
     }
     ion-list {
@@ -137,6 +146,9 @@ ion-content {
             font-size: 15px;
             font-weight: 600;
             padding-right: 30px;
+            @media only screen and (min-width:768px){
+              font-size: 18px;
+          }
           }
           p {
             font-size: 12px;
@@ -144,6 +156,9 @@ ion-content {
             font-weight: 500;
             line-height: 19px;
             color: #8a8a8e;
+            @media only screen and (min-width:768px){
+              font-size: 16px;
+          }
           }
           [dots] {
             width: 5px;
@@ -230,6 +245,9 @@ ion-content {
             font-weight: 500;
             line-height: 21px;
             color: #606f83;
+            @media only screen and (min-width:768px){
+              font-size: 18px;
+          }
           }
         }
       }
@@ -246,4 +264,8 @@ ion-content {
   p {
     margin: 0;
   }
+  @media only screen and (min-width:768px){
+    font-size: 18px;
+    padding: 20px;
+}
 }

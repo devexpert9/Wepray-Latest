@@ -80,13 +80,6 @@ ion-content {
         padding-right: 42px;
         color: #fff;
       }
-<<<<<<< HEAD
-      [playbtn] {
-        position: absolute;
-      right: -6px;
-      bottom: -9px;
-      width: 65px;
-=======
       [playbtninfo] {
         display: flex;
         align-items: center;
@@ -99,7 +92,6 @@ ion-content {
           font-style: italic;
           margin: 0px 5px 0px;
         }
->>>>>>> 3f490063cb7c92393a7c4fe605d77e34e3ed0238
       }
     }
   }
@@ -155,6 +147,9 @@ ion-content {
       margin: 0 0 4px;
       font-size: 15px;
       font-weight: 600;
+      @media only screen and (min-width:768px){
+        font-size: 18px;
+    }
     }
     p {
       font-size: 12px;
@@ -162,6 +157,9 @@ ion-content {
       font-weight: 500;
       line-height: 19px;
       color: #414141;
+      @media only screen and (min-width:768px){
+        font-size: 16px;
+    }
     }
   }
 }

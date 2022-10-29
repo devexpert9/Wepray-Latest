@@ -25,6 +25,7 @@ ion-header ion-toolbar ion-title {
   color: #fff;
   font-weight: 600;
 }
+
 ion-content {
   --background: none;
   background-image: url("../../assets/img/plbg.png");
